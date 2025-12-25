@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "365872709504",
+    "project_id": "moodlemobileclientmontalvo",
+    "storage_bucket": "moodlemobileclientmontalvo.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:365872709504:android:4f94a7a7038937298f4b65",
+        "android_client_info": {
+          "package_name": "com.example.moodlemobileclient"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "365872709504-8a2uadqj9cu8s7peg77onidipuv0a3sv.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.moodlemobileclient",
+            "certificate_hash": "1de43718cb3e10bba7726041c98107fcd6f14707"
+          }
+        },
+        {
+          "client_id": "365872709504-kgj2qo0hafm6ngja9rgsmqbuc1eko0g7.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAt22WDENmwyXZwXR2m5V6URNM0YuvtM2I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "365872709504-kgj2qo0hafm6ngja9rgsmqbuc1eko0g7.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
