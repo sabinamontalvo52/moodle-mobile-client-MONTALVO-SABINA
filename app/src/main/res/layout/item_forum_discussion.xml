@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:padding="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/selectableItemBackground">
+
+    <!-- Debate -->
+    <TextView
+        android:id="@+id/tvDiscussionTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="4"
+        android:textStyle="bold"
+        android:text="Tema"
+        android:maxLines="2"
+        android:ellipsize="end"/>
+
+    <!-- Comenzado por -->
+    <TextView
+        android:id="@+id/tvStartedBy"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="3"
+        android:text="Autor"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <!-- Réplicas -->
+    <TextView
+        android:id="@+id/tvReplies"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textStyle="bold"
+        android:paddingStart="8dp"/>
+</LinearLayout>

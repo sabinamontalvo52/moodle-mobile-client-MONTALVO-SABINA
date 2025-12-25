@@ -4,56 +4,81 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:orientation="vertical"
-        android:padding="16dp"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-        <!-- Texto de la entrega -->
+        <!-- ================= TEXTO EN LÍNEA ================= -->
+        <LinearLayout
+            android:id="@+id/headerTextOnline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="12dp"
+            android:background="?attr/selectableItemBackground">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Texto en línea"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/ivArrowText"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_down" />
+        </LinearLayout>
+
         <EditText
             android:id="@+id/txtSubmission"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="Escribe tu entrega"
+            android:hint="Escribe tu entrega aquí..."
             android:minLines="4"
             android:gravity="top"
             android:inputType="textMultiLine"
+            android:padding="12dp"
             android:background="@android:drawable/edit_text"
-            android:padding="12dp" />
+            android:visibility="gone" />
 
-        <!-- Espacio -->
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="16dp" />
-
-        <!-- Botón para adjuntar archivo -->
+        <!-- ================= ARCHIVOS ================= -->
         <Button
             android:id="@+id/btnChooseFile"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Adjuntar archivo" />
+            android:text="Subir archivo" />
 
-        <!-- Nombre del archivo seleccionado -->
         <TextView
             android:id="@+id/txtFileName"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Ningún archivo seleccionado"
-            android:paddingTop="8dp"
-            android:textSize="14sp" />
+            android:textSize="14sp"
+            android:paddingTop="8dp" />
 
-        <!-- Espacio -->
-        <View
+        <TextView
+            android:id="@+id/tvFilesTitle"
             android:layout_width="match_parent"
-            android:layout_height="24dp" />
+            android:layout_height="wrap_content"
+            android:text="Archivos"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:paddingTop="24dp"
+            android:paddingBottom="8dp" />
 
-        <!-- Botón enviar -->
+
+        <!-- ================= ENVIAR ================= -->
         <Button
             android:id="@+id/btnSend"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Enviar entrega" />
+            android:text="Enviar entrega"
+            android:layout_marginTop="32dp" />
 
     </LinearLayout>
-
 </ScrollView>

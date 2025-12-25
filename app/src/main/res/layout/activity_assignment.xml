@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:fillViewport="true">
 
+    <!-- ScrollView -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -37,7 +39,84 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="Enviar entrega"
-            android:layout_marginTop="16dp" />
+            android:visibility="gone" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Estado de la entrega"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/layoutSubmissionStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <TextView
+                android:id="@+id/txtSubmissionStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No entregado" />
+
+            <TextView
+                android:id="@+id/txtGradingStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="No calificado" />
+
+            <TextView
+                android:id="@+id/txtLastModified"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Última modificación: —" />
+
+            <TextView
+                android:id="@+id/txtSubmittedFiles"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Archivos enviados: —" />
+        </LinearLayout>
+
+        <!-- Encabezado desplegable -->
+        <LinearLayout
+            android:id="@+id/layoutTextSubmissionHeader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingTop="8dp"
+            android:clickable="true"
+            android:focusable="true">
+
+            <ImageView
+                android:id="@+id/ivTextArrow"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:src="@drawable/ic_arrow_right"
+                android:contentDescription="Expandir texto" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:text="Texto enviado"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <!-- Texto enviado (oculto por defecto) -->
+        <TextView
+            android:id="@+id/txtSubmittedText"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:padding="8dp"
+            android:text="—"
+            android:background="#F5F5F5" />
 
     </LinearLayout>
+
 </ScrollView>
